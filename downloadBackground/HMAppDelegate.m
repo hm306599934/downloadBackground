@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"test");
     return YES;
 }
 							
@@ -35,12 +36,29 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
+{
+    self.backgroundSessionCompletionHandler = completionHandler;
+    [self presentNotification];
+}
+
+- (void)presentNotification
+{
+    UILocalNotification *localNotification = [[UILocalNotification alloc]init];
+    localNotification.alertBody = @"下载完成";
+    localNotification.alertAction = @"后台下载已经完成";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication]applicationIconBadgeNumber] + 1;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+    
 }
 
 @end

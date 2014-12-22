@@ -21,6 +21,9 @@
 		EAE8AC14195016E3001145A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE8ABF6195016E2001145A6 /* UIKit.framework */; };
 		EAE8AC1C195016E3001145A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAE8AC1A195016E3001145A6 /* InfoPlist.strings */; };
 		EAE8AC1E195016E3001145A6 /* downloadBackgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8AC1D195016E3001145A6 /* downloadBackgroundTests.m */; };
+		EAEAB45A19506C1500E401F9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAB45919506C1500E401F9 /* AVFoundation.framework */; };
+		EAEAB45C19506CC600E401F9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAB45B19506CC600E401F9 /* MediaPlayer.framework */; };
+		EAEAB45E19506CD700E401F9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAB45D19506CD700E401F9 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		EAE8AC19195016E3001145A6 /* downloadBackgroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "downloadBackgroundTests-Info.plist"; sourceTree = "<group>"; };
 		EAE8AC1B195016E3001145A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAE8AC1D195016E3001145A6 /* downloadBackgroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = downloadBackgroundTests.m; sourceTree = "<group>"; };
+		EAEAB45919506C1500E401F9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EAEAB45B19506CC600E401F9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EAEAB45D19506CD700E401F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEAB45E19506CD700E401F9 /* AudioToolbox.framework in Frameworks */,
+				EAEAB45C19506CC600E401F9 /* MediaPlayer.framework in Frameworks */,
+				EAEAB45A19506C1500E401F9 /* AVFoundation.framework in Frameworks */,
 				EAE8ABF5195016E2001145A6 /* CoreGraphics.framework in Frameworks */,
 				EAE8ABF7195016E2001145A6 /* UIKit.framework in Frameworks */,
 				EAE8ABF3195016E2001145A6 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,9 @@
 		EAE8ABF1195016E2001145A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAEAB45D19506CD700E401F9 /* AudioToolbox.framework */,
+				EAEAB45B19506CC600E401F9 /* MediaPlayer.framework */,
+				EAEAB45919506C1500E401F9 /* AVFoundation.framework */,
 				EAE8ABF2195016E2001145A6 /* Foundation.framework */,
 				EAE8ABF4195016E2001145A6 /* CoreGraphics.framework */,
 				EAE8ABF6195016E2001145A6 /* UIKit.framework */,
@@ -457,6 +469,7 @@
 				EAE8AC23195016E3001145A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAE8AC24195016E3001145A6 /* Build configuration list for PBXNativeTarget "downloadBackgroundTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				EAE8AC26195016E3001145A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
